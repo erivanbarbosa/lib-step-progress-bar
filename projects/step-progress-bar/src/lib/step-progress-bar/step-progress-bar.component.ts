@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { StepItem } from '../model/StepItem';
 
 @Component({
   selector: 'redesprou-step-progress-bar',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-progress-bar.component.scss']
 })
 export class StepProgressBarComponent implements OnInit {
+
+  @Input("items") items: Array<StepItem>;
 
   constructor() { }
 
