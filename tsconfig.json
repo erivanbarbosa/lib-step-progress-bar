@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "step-progress-bar": [
+        "dist/step-progress-bar"
+      ],
+      "step-progress-bar/*": [
+        "dist/step-progress-bar/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
