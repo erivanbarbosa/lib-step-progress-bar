@@ -13,7 +13,6 @@ export class StepItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    debugger
   }
 
 }

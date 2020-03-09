@@ -1,5 +1,5 @@
-    <div class="container" style="width: 33.33%;">
-        <div class="step-item">
+    <div class="containers" style="width: 300px;" [class.item-success]="item.status=='success'" [class.item-fail]="item.status=='fail'" [class.first-item]="item.isFirst">
+        <div class="step-item" >
             {{item.value}}
         </div>
 

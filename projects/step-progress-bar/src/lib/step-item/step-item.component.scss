@@ -1,5 +1,6 @@
 .step-item {
-    display: inline-block;
+    display: block;
+    margin: auto auto;
     width: 30px;
     height: 30px;
     border: 1px solid #BBBBBB;
@@ -7,22 +8,43 @@
     text-align: center;
     line-height: 30px;
     background-color: white;
-    float: right;
     color: #BBBBBB;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .item-line {
     border: 3px solid #BBBBBB;
     transform: translate(0, -50%);
-    width: 99%;
+    width: 100%;
     position: absolute;
     top: 50%;
+    right: 0;
     z-index: -1;
 }
 
 
-.container {
+.containers {
     width: 100%;
     display: inline-block;
     position: relative;
+}
+
+.item-success .step-item{
+    border-color: #3FB272;
+    background-color: #3FB272;
+    color: white;
+}
+
+.item-success .item-line{
+    border-color: #3FB272;
+}
+
+.item-fail .step-item{
+    border-color: #E64B3B;
+    background-color: #E64B3B;
+    color: white;
+}
+
+.item-fail .item-line{
+    border-color: #E64B3B;
 }
