@@ -10,9 +10,15 @@ export class StepProgressBarComponent implements OnInit {
 
   @Input("items") items: Array<StepItem>;
 
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getWidth() {
+    const width = 100 / this.items.length;
+    return width;
   }
 
 }

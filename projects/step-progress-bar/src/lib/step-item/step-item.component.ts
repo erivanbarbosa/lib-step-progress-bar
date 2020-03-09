@@ -9,6 +9,7 @@ import { StepItem } from '../model/StepItem';
 export class StepItemComponent implements OnInit {
 
   @Input("item") item: StepItem;
+  @Input("width") width: StepItem;
 
   constructor() { }
 
