@@ -1,4 +1,11 @@
-App component works!
 <div style="width: 500px;">
-    <redesprou-step-progress-bar [items]="items"></redesprou-step-progress-bar>
+    <redesprou-step-progress-bar steps="5"></redesprou-step-progress-bar>
+</div>
+
+<div class="row" style="margin: 20px 20px;">
+    <div>
+        <button style="margin: 10px" class="btn btn-success" (click)="setSuccess()">Success</button>
+        <button style="margin: 10px" class="btn btn-danger"  (click)="setFail()">Fail</button>
+        <button style="margin: 10px" class="btn btn-danger"  (click)="reset()">Reset</button>
+    </div>
 </div>
