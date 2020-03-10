@@ -1,27 +1,119 @@
-# LibStepProgressBar
+<div align="center">
+  <h1>Step Progress Bar</h1>
+  <br>
+   A very simple step progress bar for angular
+  <br>
+  <br>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Step success style
+- Step fail style
+- Steps reseting
 
-## Code scaffolding
+## Dependencies
+Angular 6 or higher
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+npm i step-progress-bar
+```
 
-## Running unit tests
+## Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Add to NgModule:** add StepProgressBarModule to desired NgModule,
 
-## Running end-to-end tests
+```typescript
+import { CommonModule } from '@angular/common';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+import {StepProgressBarModule} from 'step-progress-bar'
 
-## Further help
+@NgModule({
+  imports: [
+    CommonModule,
+    StepProgressBarModule // StepProgressBarModule added
+  ],
+  bootstrap: [App],
+  declarations: [App]
+})
+class MainModule {}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Use
+
+Add **redesprou-step-progress-bar** in desired hmtl page, providing the desired number of steps
+```html
+...
+<div>
+    <redesprou-step-progress-bar steps="5"></redesprou-step-progress-bar>
+</div>
+...
+
+```
+
+Create a ViewChild for  **StepProgressBarComponent** and call is methods as needed
+
+```typescript
+import { StepProgressBarComponent } from 'step-progress-bar/lib/step-progress-bar/step-progress-bar.component';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+
+  @ViewChild(StepProgressBarComponent, {static: false}) stepProgressBarComponent: StepProgressBarComponent;
+
+  success() {
+    this.stepProgressBarComponent.setSuccess();
+  }
+
+  fail() {
+    this.stepProgressBarComponent.setFail();
+  }
+
+  reset() {
+    this.stepProgressBarComponent.reset();
+  }
+}
+```
+
+## Methods
+
+
+| Method            | Description                    |
+| ----------------- | ------------------------------ |
+| step              | The number of steps in this progress bar |
+
+
+
+## Functions
+```
+setSuccess():void
+```
+Advances one step, setting current step as "SUCESS"
+Do nothing if last step is alredy set
+##
+```
+setFail():void
+```
+Advances one step, setting current step as "FAIL"
+Do nothing if last step is alredy set
+##
+```
+reset():void
+```
+Resets to the first step, setting all steps as "PENDENT"
+##
+
+## License
+
+MIT
+
+---
+
+> GitHub [@erivanbarbosa](https://github.com/erivanbarbosa) &nbsp;&middot;&nbsp;
