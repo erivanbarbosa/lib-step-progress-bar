@@ -82,11 +82,11 @@ export class AppComponent {
 }
 ```
 
-## Methods
+## Options
 
 
-| Method            | Description                    |
-| ----------------- | ------------------------------ |
+| Option            | Description                              |
+| ----------------- | ---------------------------------------- |
 | step              | The number of steps in this progress bar |
 
 
