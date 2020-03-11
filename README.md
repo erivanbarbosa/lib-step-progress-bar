@@ -116,4 +116,4 @@ MIT
 
 ---
 
-> GitHub [@erivanbarbosa](https://github.com/erivanbarbosa) &nbsp;&middot;&nbsp;
+> GitHub [@erivanbarbosa](https://github.com/erivanbarbosa)
