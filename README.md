@@ -95,14 +95,14 @@ export class AppComponent {
 ```
 setSuccess():void
 ```
-Advances one step, setting current step as "SUCESS"
-Do nothing if last step is alredy set
+Advances one step, setting current step as "SUCCESS"
+Do nothing if last step is already set
 ##
 ```
 setFail():void
 ```
 Advances one step, setting current step as "FAIL"
-Do nothing if last step is alredy set
+Do nothing if last step is already set
 ##
 ```
 reset():void
@@ -116,4 +116,4 @@ MIT
 
 ---
 
-> GitHub [@erivanbarbosa](https://github.com/erivanbarbosa) &nbsp;&middot;&nbsp;
+> GitHub [@erivanbarbosa](https://github.com/erivanbarbosa)
